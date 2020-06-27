@@ -7,4 +7,4 @@ To run it, first run generatekey.py to generate an AES-256 key. And then you can
 <br>
 If you have issues running EasyCrypt, please let me know.
 <br>
-<b>NOTE:</b> You cannot only download easycrypt.py or any other files. You will need the classes.py file for EasyCrypt to run correctly in the same directory.
+<b>NOTE:</b> You cannot only download easycrypt.py or any other files. You will need the classes.py file in the same directory for EasyCrypt to run correctly.
