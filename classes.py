@@ -1,7 +1,5 @@
 # EasyCrypt Encryption and Decryption Functions
 from Crypto.Cipher import AES
-from Crypto.Util.Padding import unpad
-from Crypto.Util.Padding import pad
 
 def decryptfile(input_file, key, newfile):
     # Read the data from the file
