@@ -8,3 +8,5 @@ To run it, first run generatekey.py to generate an AES-256 key. And then you can
 If you have issues running EasyCrypt, please let me know.
 <br>
 <b>NOTE:</b> You cannot only download easycrypt.py or any other files. You will need the classes.py file in the same directory for EasyCrypt to run correctly.
+<br>
+<b>UPDATE</b>: EasyCrypt decided to switch to CFB mode because we think it's stronger.
