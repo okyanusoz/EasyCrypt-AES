@@ -9,4 +9,4 @@ If you have issues running EasyCrypt, please let me know.
 <br>
 <b>NOTE:</b> You cannot only download easycrypt.py or any other files. You will need the classes.py file in the same directory for EasyCrypt to run correctly.
 <br>
-<b>UPDATE</b>: EasyCrypt decided to switch to CFB mode because we think it's stronger.
+<b>EasyCrypt AES Edition uses AES-256 in CFB mode</b>
