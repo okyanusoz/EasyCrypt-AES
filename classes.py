@@ -1,5 +1,6 @@
 # EasyCrypt Encryption and Decryption Functions
 from Crypto.Cipher import AES
+from Crypto.Util.Padding import pad, unpad
 
 def decryptfile(input_file, key, newfile):
     # Read the data from the file
@@ -8,14 +9,14 @@ def decryptfile(input_file, key, newfile):
     ciphered_data = file_in.read() # Read the rest of the data
     file_in.close()
 
-    cipher = AES.new(key, AES.MODE_CFB, iv=iv)  # Setup cipher
-    original_data = cipher.decrypt(ciphered_data);
+    cipher = AES.new(key, AES.MODE_CBC, iv=iv)  # Setup cipher
+    original_data = unpad(cipher.decrypt(ciphered_data));
     open(newfile, "wb").write(original_data);
 def encryptfile(output_file, originalfile, key):
     data = open(originalfile, "rb").read() # Must be a bytes object
     # Create cipher object and encrypt the data
-    cipher = AES.new(key, AES.MODE_CFB) # Create a AES cipher object with the key using the mode CFB
-    ciphered_data = cipher.encrypt(data)
+    cipher = AES.new(key, AES.MODE_CBC) # Create a AES cipher object with the key using the mode CBC
+    ciphered_data = pad(cipher.encrypt(data))
 
     file_out = open(output_file, "wb") # Open file to write bytes
     file_out.write(cipher.iv) # Write the iv to the output file (will be required for decryption)
