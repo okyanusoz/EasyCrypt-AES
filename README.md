@@ -1,3 +1,7 @@
+## Archived
+
+This project is no longer being maintained. I recommend using OpenSSL.
+
 # EasyCrypt-AES
 AES-256 version of EasyCrypt
 <br>
